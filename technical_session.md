@@ -133,7 +133,11 @@
 - Sorts the elements of the array.
 #### Example-
 	const fruits = ["Banana", "Orange", "Apple", "Mango"];
-	fruits.sort();  // returns ["Apple", "Banana", "Mango", "Orange"]
+	fruits.sort((a,b) => {
+     if(a < b) return -1;
+     if(a > b) return 1;
+     return 0;
+     }));  // returns ["Apple", "Banana", "Mango", "Orange"]
 
 ### References-
 - https://www.w3schools.com/js/js_array_methods.asp
