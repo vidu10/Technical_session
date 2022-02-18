@@ -80,6 +80,60 @@
 	const cars = ['BMW', 'Audi', 'Ford'];
 	cars.unshift('Toyota'); // 'BMW' is deleted 
 	console.log(cars);
+	
+### Map Method-
+- Map method executes the function for each element of an array.
+- It takes a function as an argument.
+- The original array remains same and it gives new array as a result.
+#### Syntax-
+	array_name.map(function_name);
+#### Example- 
+	const numbers = [65, 44, 12, 4];
+	const newArr = numbers.map(multiply)
+
+	function multiply(num) {   // takes each element of the array 'number' and multiply by 10
+	  return num * 10;
+	}
+
+### Filter Method-
+- Filter method creates a new array of elements that passes a function given to it.
+- A function is provided as an argument to the filter method.
+#### Example-
+	const ages = [32, 33, 16, 40];
+	const result = ages.filter(checkAdult);
+
+	function checkAdult(age) {
+	  return age >= 18;
+	}
+	
+### Find Method
+- Find method returns the first element from the array that passes the test.
+- It returns undefined if no element passes the test(function).
+#### Example-
+	const ages = [32, 33, 16, 40];
+	const result = ages.find(checkAdult); //returns 32 only 
+
+	function checkAdult(age) {
+	  return age >= 18;
+	}
+
+### Reduce Method- 
+- It returns only the single value, i.e, the calculated result from the function.
+- It takes in an initial starting element as the argument.
+- If initial value is not provided, then the first element of the array is assigned as initial element.
+#### Example-
+	const num = [1, 2, 4, 6];
+	const result = num.reduce(add);
+
+	function add(initial, current){ 
+	    return initial + current;  // takes initial element as num[0], i.e, 1
+	}
+	
+### Sort Method-
+- Sorts the elements of the array.
+#### Example-
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	fruits.sort();
 
 ### References-
 - https://www.w3schools.com/js/js_array_methods.asp
